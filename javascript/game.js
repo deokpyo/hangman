@@ -1,8 +1,6 @@
-    // object
+    //object
       var LOL = {
         //variables
-        name: "League of Legends",
-        type: "Hangman",
         champ: "",
         letter: "",
         correct: "",
@@ -104,7 +102,6 @@
           if(index_input < 0){
             this.used_letter.push(input);
             this.used.innerHTML = this.used_letter;
-
             if(index_L < 0 && index_U < 0){
             this.num_attempts--;
             }
@@ -134,7 +131,6 @@
             this.show_attempts.innerHTML = "DEFEAT <br/>Press any key to start a new game";
             this.loss += 1;
             this.ll.innerHTML = "Losses: " + this.loss;
-
             this.correct.innerHTML = this.champ;
             this.champ_img.innerHTML = "<img src='images/" + this.champion + ".jpg' alt='" + this.champion + "' />";
             this.reload = true;
@@ -144,14 +140,9 @@
             this.show_attempts.innerHTML = "WELCOME TO SUMMNOR'S RIFT <br/>Press any key to start a new game";
             this.win += 1;
             this.ww.innerHTML = "Wins: " + this.win;
-            
-
-            //START FROM HERE, SELECT THE IMAGE BASED ON CHAMP NAME
             this.champ_img.innerHTML = "<img src='images/" + this.champion + ".jpg' alt='" + this.champion + "' />"; 
             this.reload = true;
             this.first_key = true;
-            // this.resetGame();
-            // this.loadGame();
           }
         },
 
@@ -161,7 +152,6 @@
           this.used.innerHTML = "";
           this.ll.innerHTML = "Losses: " + this.loss;
           this.ww.innerHTML = "Wins: " + this.win;
-          
         },
 
         // display when a user types in something other than a letter
