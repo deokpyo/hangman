@@ -32,8 +32,6 @@
           var list_len = this.champions_list.length;
           var rand_num = Math.floor(Math.random() * list_len-1);
           var selected_champion = this.champions_list.splice(rand_num, 1);
-          //remove this line after finishing       
-          console.log(selected_champion);
           return selected_champion;        
         },
 
@@ -87,12 +85,12 @@
         loadGame: function(){
           // Initialize the game
           var champ = this.selectChampion();
+          this.champ = champ.toString(); // this is for when losing the game, to show the answer
           // remove spaces and ' for image names
           this.champion = champ.toString();
           this.champion = this.champion.toLowerCase();
           this.champion = this.champion.replace(/'/i, '');
           this.champion = this.champion.replace(/ /i, '');
-          console.log(this.champion);
           LOL.createWord(champ);
         },
 
@@ -134,23 +132,22 @@
           this.show_attempts.innerHTML = "You have " + this.num_attempts + " attempts left.";
           if (this.num_attempts < 1) {
             this.show_attempts.innerHTML = "DEFEAT <br/>Press any key to start a new game";
-            console.log(this.loss);
             this.loss += 1;
-            console.log(this.loss);
             this.ll.innerHTML = "Losses: " + this.loss;
+
+            this.correct.innerHTML = this.champ;
+            this.champ_img.innerHTML = "<img src='images/" + this.champion + ".jpg' alt='" + this.champion + "' />";
             this.reload = true;
             this.first_key = true;
           }
           if (this.counter === this.champ_letters.length){
             this.show_attempts.innerHTML = "WELCOME TO SUMMNOR'S RIFT <br/>Press any key to start a new game";
-            console.log(this.win);
             this.win += 1;
-            console.log(this.win);
             this.ww.innerHTML = "Wins: " + this.win;
             
 
             //START FROM HERE, SELECT THE IMAGE BASED ON CHAMP NAME
-            this.champ_img.innerHTML = "<img src='images/" + this.champion + ".jpg' alt='" + this.champion + "' />" 
+            this.champ_img.innerHTML = "<img src='images/" + this.champion + ".jpg' alt='" + this.champion + "' />"; 
             this.reload = true;
             this.first_key = true;
             // this.resetGame();
