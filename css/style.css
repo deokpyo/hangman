@@ -1,0 +1,93 @@
+body {
+  font-family: "Adobe Garamond Pro",Garamond,Baskerville,"Baskerville Old Face","Hoefler Text","Times New Roman",serif;
+  color: #d1d3d5;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7),-1px -1px 4px rgba(0,0,0,0.5);
+  background-color: #000000;
+}
+
+h3 {
+  color: #5EDBE4;
+}
+
+h4 {
+  color: #FFFFFF;
+}
+
+h4 a {
+  color: #d1d3d5;
+}
+
+h4 a:hover {
+  text-decoration: none;
+  color: #5EDBE4;
+}
+
+#win {
+  color: #5EDBE4;
+}
+
+#loss{
+  color: #c9aa71;
+
+}
+
+#bg {
+  position: absolute;
+  width: 100%;
+  min-width: 1000px;
+  height: 1080px;
+  z-index: -10;
+  background-color: black;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-image: url(../images/bg.jpg);
+  top: 0;
+}
+
+#header {
+  background: transparent url("../images/header.png") no-repeat top center;
+  position: relative;
+  height: 222px;
+  margin: 0 auto;
+  min-width: 1000px;
+  z-index: 8;
+  top: 20px;
+  margin-bottom: 10px;
+}
+
+#header h1 {
+  text-align: center;
+  padding: 100px;
+  float: none;
+  clear: left;
+  margin: 0;
+  font-size: 2.26667em;
+  background-image: none;
+  color: #5EDBE4;
+}
+
+#attempts {
+  color: #FFFFFF;
+}
+
+#my-word {
+  margin: 0;
+  display: block;
+  padding: 0;
+  display:block;
+}
+
+#my-word li {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  display: inline-block;
+  padding: 0 10px;
+  font-size:1.6em;
+}
+
+#champ img{
+  max-width:100%;
+max-height:100%;
+
+}
